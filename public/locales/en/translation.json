@@ -1,0 +1,90 @@
+{
+  "socialSupportApplication": "Social Support Application",
+  "steps": {
+    "personalInformation": "Personal Information",
+    "familyFinancialInfo": "Family & Financial Info",
+    "situationDescriptions": "Situation Descriptions",
+    "submission": "Submission"
+  },
+  "fields": {
+    "name": "Name",
+    "nationalId": "National ID",
+    "dateOfBirth": "Date of Birth",
+    "gender": "Gender",
+    "address": "Address",
+    "city": "City",
+    "state": "State",
+    "country": "Country",
+    "phone": "Phone",
+    "email": "Email",
+    "maritalStatus": "Marital Status",
+    "dependents": "Dependents",
+    "employmentStatus": "Employment Status",
+    "monthlyIncome": "Monthly Income",
+    "housingStatus": "Housing Status",
+    "currentFinancialSituation": "Current Financial Situation",
+    "employmentCircumstances": "Employment Circumstances",
+    "reasonForApplying": "Reason for Applying"
+  },
+  "options": {
+    "maritalStatus": {
+      "single": "Single",
+      "married": "Married",
+      "divorced": "Divorced",
+      "widowed": "Widowed"
+    },
+    "gender": {
+      "male": "Male",
+      "female": "Female",
+      "prefer_not_to_say": "Prefer not to say"
+    },
+    "employmentStatus": {
+      "employed": "Employed",
+      "unemployed": "Unemployed",
+      "retired": "Retired",
+      "other": "Other"
+    },
+    "housingStatus": {
+      "owner": "Owner",
+      "tenant": "Tenant",
+      "cooperative": "Co-operative member",
+      "homeless": "Homeless",
+      "other": "Other"
+    }
+  },
+  "languagesLabel": "Languages",
+  "buttons": {
+    "discard": "Discard",
+    "accept": "Accept",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish",
+    "helpMeWrite": "Help Me Write",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "generate": "Generate",
+    "tryAgain": "Try Again"
+  },
+  "formWizard": {
+    "stepper": "Application Steps"
+  },
+  "validation": {
+    "required": "{{field}} is required",
+    "email": "Invalid email format",
+    "minNumber": "{{field}} must be at least {{min}}"
+  },
+  "dialogs": {
+    "aiSuggestion": "AI Suggestion",
+    "editPrompt": "Edit Prompt"
+  },
+  "labels": {
+    "yourPrompt": "Your Prompt"
+  },
+  "messages": {
+    "applicationSubmitted": "Application submitted successfully!",
+    "submissionFailed": "Submission failed. Please try again."
+  },
+  "prompts": {
+    "situationDescription": "I am applying for social support. My employment status is {{employmentStatus}} and my monthly income is {{monthlyIncome}}. Help me write about my {{fieldName}}."
+  }
+}
