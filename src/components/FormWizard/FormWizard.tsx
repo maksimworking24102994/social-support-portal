@@ -1,4 +1,4 @@
-import { useState, useContext, useRef, useEffect } from "react";
+import { useState, useContext, useRef } from "react";
 import {
   Stepper,
   Step,
@@ -23,6 +23,7 @@ import {
   getSituationDescriptionsSchema,
 } from "@/lib/schemas/schemas";
 import { type AnyObjectSchema } from "yup";
+import { useFocusOnStepChange } from "@/lib/hooks/useFocusOnStepChange";
 
 const steps = [
   "steps.personalInformation",
@@ -52,16 +53,7 @@ export const FormWizard = () => {
   const { state, dispatch } = useContext(FormContext);
   const stepContentRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    if (stepContentRef.current) {
-      const firstFocusableElement = stepContentRef.current.querySelector(
-        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
-      );
-      if (firstFocusableElement) {
-        (firstFocusableElement as HTMLElement).focus();
-      }
-    }
-  }, [activeStep]);
+  useFocusOnStepChange(stepContentRef, activeStep);
 
   const validationSchema = [
     getPersonalInformationSchema(t),
@@ -86,6 +78,8 @@ export const FormWizard = () => {
   const handleBackStep = () => {
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
+
+  const hasNextStep = activeStep < steps.length - 1;
 
   return (
     <Box sx={{ width: "100%", mt: 4 }}>
@@ -125,7 +119,7 @@ export const FormWizard = () => {
               </Button>
             )}
             <Box sx={{ flex: "1 1 auto" }} />
-            {activeStep !== steps.length - 1 && (
+            {hasNextStep && (
               <Button type="submit" aria-label={t("buttons.next")}>
                 {t("buttons.next")}
               </Button>

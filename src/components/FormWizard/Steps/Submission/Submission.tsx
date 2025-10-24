@@ -10,6 +10,7 @@ import { useContext, useState } from "react";
 import { FormContext } from "@/lib/context/FormContext";
 import { useTranslation } from "react-i18next";
 import { useSnackbar } from "notistack";
+import { formatValue } from "@/lib/utils/formatters";
 
 export const Submission = () => {
   const { t } = useTranslation();
@@ -43,7 +44,7 @@ export const Submission = () => {
             typeof value !== "function" && (
               <Grid size={{ xs: 12, sm: 6 }} key={key}>
                 <Typography>
-                  <strong>{t(`fields.${key}`)}:</strong> {String(value)}
+                  <strong>{t(`fields.${key}`)}:</strong> {formatValue(value)}
                 </Typography>
               </Grid>
             )

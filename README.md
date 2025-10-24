@@ -53,7 +53,7 @@ The application requires an API key for the "Help Me Write" feature.
     ```bash
     touch .env
     ```
-2.  Add your API key to the `.env` file as follows:
+2.  Add your `API key`, `OpenAI Model` and `API URL` to the `.env` file as follows:
     ```
     API_URL=Your_API_URL
     OPENAI_MODEL=Your_OPENAI_MODEL
@@ -97,10 +97,8 @@ The project follows a standard React application structure:
 |-- /pages            # Top-level page components (e.g., Home)
 |-- /providers        # Global providers (theme, router, i18n)
 |-- /services         # API service definitions (e.g., openai.ts)
-|-- /tests            # Test files
 |-- App.tsx           # Main application component with routing
 |-- main.tsx          # Application entry point
-|-- setupTests.ts     # Jest setup file
 ```
 
 ## Architectural Decisions & Potential Improvements
