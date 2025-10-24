@@ -50,9 +50,21 @@ Follow these instructions to get a copy of the project up and running on your lo
 The application requires an API key for the "Help Me Write" feature.
 
 1.  Create a `.env` file in the root of the project.
-    ```bash
-    touch .env
-    ```
+
+    - **For macOS and Linux:**
+      ```bash
+      touch .env
+      ```
+    - **For Windows:**
+      - Using Command Prompt:
+        ```bash
+        type nul > .env
+        ```
+      - Or using PowerShell:
+        ```powershell
+        New-Item -ItemType file .env
+        ```
+
 2.  Add your `API key`, `OpenAI Model` and `API URL` to the `.env` file as follows:
     ```
     API_URL=Your_API_URL
